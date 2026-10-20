@@ -1,12 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Trifler">
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Trifler — interlocking TL monogram">
   <defs>
     <linearGradient id="ocean" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#183b56"/>
-      <stop offset="1" stop-color="#0b1726"/>
+      <stop offset="0" stop-color="#1b425a"/>
+      <stop offset="1" stop-color="#091624"/>
+    </linearGradient>
+    <linearGradient id="tide" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a7e0d5"/>
+      <stop offset="1" stop-color="#5aafbd"/>
     </linearGradient>
   </defs>
   <rect width="256" height="256" rx="128" fill="url(#ocean)"/>
-  <circle cx="128" cy="128" r="103" fill="none" stroke="#9dd9d2" stroke-opacity=".26"/>
-  <path d="M77 72h102v18h-41v88h-20V90H77z" fill="#eaf7f4"/>
-  <path d="M48 192c27-19 51-19 80 0s53 19 80 0M64 211c22-14 43-14 64 0s42 14 64 0" fill="none" stroke="#70b8bf" stroke-width="4" stroke-linecap="round" opacity=".72"/>
+  <circle cx="128" cy="128" r="108" fill="none" stroke="#a7e0d5" stroke-opacity=".23"/>
+  <!-- The L runs beneath the T; the narrow navy seam makes the overlap legible. -->
+  <path d="M143 94 165 81V170H198L186 192H112V170H143Z" fill="url(#tide)"/>
+  <path d="M58 64H184L172 86H129V178L106 193V86H70Z" fill="#eff8f2" stroke="#102b3b" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill"/>
+  <!-- A quiet tide line echoes the ocean-of-knowledge signature. -->
+  <path d="M61 212c22-10 44-10 67 0s45 10 67 0" fill="none" stroke="#7fc5c8" stroke-width="3" stroke-linecap="round" opacity=".7"/>
 </svg>
