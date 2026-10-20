@@ -1,14 +1,18 @@
 ---
 title: A place to begin
-date: '2026-10-20'
+date: 2026-10-20
 slug: a-place-to-begin
-description: A small home for notes, reflections, and discoveries along the way.
-categories: [Notes]
-tags: [learning, reflections]
+description: Notes, reflections, and practical lessons from building, testing, and learning.
+categories:
+  - Notes
+tags:
+  - learning
+  - reflections
 pin: true
 published: true
+math: false
+mermaid: false
 ---
-
 Every useful idea begins somewhere: a question, an experiment, a conversation,
 or a problem that takes longer to understand than expected.
 
