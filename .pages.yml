@@ -1,0 +1,134 @@
+# Pages CMS configuration: https://pagescms.org/docs/configuration/
+# Keep unmanaged Jekyll/Chirpy keys when saving the small settings forms.
+settings:
+  content:
+    merge: true
+
+media:
+  - name: images
+    label: Images
+    input: assets/img/posts
+    # Chirpy adds site.baseurl (/trifler) to both inline and cover images.
+    output: /assets/img/posts
+    extensions: [jpg, jpeg, png, webp, gif, svg]
+    rename: safe
+
+content:
+  - name: posts
+    label: Notes & articles
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    subfolders: false
+    exclude: [.gitkeep]
+    filename:
+      template: "{fields.date}-{fields.slug}.md"
+      field: create
+    view:
+      fields: [title, date, published, categories]
+      primary: title
+      sort: [date, title]
+      search: [title, description, tags]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: "Use lowercase English letters, numbers, and single hyphens."
+        description: "For example: lidar-time-sync. Keep this unchanged after publishing so links keep working."
+      - name: date
+        label: Publication date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+        description: "Choose the calendar date in Asia/Shanghai. The site interprets this date at 00:00 in that timezone. New filenames use this field."
+      - name: categories
+        label: Categories
+        type: string
+        list:
+          max: 2
+        description: "Add a top-level category, then optionally a subcategory; for example, Robotics and SLAM."
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+        description: "Add one tag per item. Use lowercase for English tags, such as ros2, lidar, or research."
+      - name: description
+        label: Summary
+        type: text
+        description: "A short introduction shown on the home page and below the article title."
+      - name: published
+        label: Publish on the website
+        type: boolean
+        default: false
+        description: "Turn on when ready to publish. When off, the article is omitted from the website, but its source is still visible in the public GitHub repository."
+      - name: pin
+        label: Pin to the top
+        type: boolean
+        default: false
+      - name: math
+        label: Enable math formulas
+        type: boolean
+        default: false
+      - name: mermaid
+        label: Enable Mermaid diagrams
+        type: boolean
+        default: false
+      - name: image
+        label: Cover image
+        type: image
+        options:
+          media: images
+        description: "Optional. A landscape image around 1200 × 630 works well."
+      - name: body
+        label: Article
+        type: code
+        required: true
+        options:
+          format: markdown
+        description: "Write Markdown here. This source editor preserves fenced code, math, Mermaid, and Chirpy attributes. Upload inline images in Images, then insert their /assets/img/posts/... path."
+
+  - name: about
+    label: About
+    type: file
+    path: _tabs/about.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Page title
+        type: string
+        default: About
+      - name: body
+        label: About me
+        type: code
+        options:
+          format: markdown
+
+  - name: site
+    label: Site identity
+    type: file
+    path: _config.yml
+    format: yaml
+    fields:
+      - name: title
+        label: Site name
+        type: string
+        required: true
+      - name: tagline
+        label: Signature
+        type: string
+        required: true
+      - name: description
+        label: Site description
+        type: text
+        description: "A short description for search engines and the RSS feed."

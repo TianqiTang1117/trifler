@@ -1,39 +1,44 @@
-# Chirpy Starter
+# Trifler
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+*A wanderer in the ocean of knowledge.*
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+Personal notes, reflections, and technical explorations, built with
+[Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy).
 
-## Why This Starter Exists
+- Website: https://tianqitang1117.github.io/trifler/
+- Writing dashboard: https://app.pagescms.org/
+- Repository: https://github.com/TianqiTang1117/trifler
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
+## Write online
 
-To unlock all features, the following files must be present in your Jekyll site:
+Sign in to Pages CMS with GitHub and open `TianqiTang1117/trifler` on `main`.
+The repository's `.pages.yml` defines posts, images, the About page, and site settings.
+See [the writing guide](docs/cms-setup.md) for the publishing workflow.
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+Saving a published article triggers GitHub Actions. The website updates after
+the **Build and Deploy** workflow succeeds.
+
+## Local preview
+
+Use Ruby 3.4 and Bundler:
+
+```sh
+bundle install
+bundle exec jekyll serve --baseurl /trifler
 ```
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+Open http://127.0.0.1:4000/trifler/.
 
-## Usage
+## Deployment
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+In GitHub **Settings → Pages**, set **Source** to **GitHub Actions**.
+The workflow builds the site, checks internal links, and publishes its artifact.
 
-## Contributing
+`_config.yml` uses `url: https://tianqitang1117.github.io` and `baseurl: /trifler`.
+Change both deliberately if the deployment address changes.
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+## Credits
 
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+Based on the official [Chirpy Starter](https://github.com/cotes2020/chirpy-starter),
+with the Chirpy theme using the 7.x compatible release range in `Gemfile`.
+The template's MIT license is retained in `LICENSE`.
