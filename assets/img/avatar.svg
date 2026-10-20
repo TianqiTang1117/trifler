@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Trifler — interlocking TL monogram">
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Trifler — TL monogram">
   <defs>
     <linearGradient id="ocean" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#1b425a"/>
@@ -11,9 +11,9 @@
   </defs>
   <rect width="256" height="256" rx="128" fill="url(#ocean)"/>
   <circle cx="128" cy="128" r="108" fill="none" stroke="#a7e0d5" stroke-opacity=".23"/>
-  <!-- The L runs beneath the T; the narrow navy seam makes the overlap legible. -->
-  <path d="M143 94 165 81V170H198L186 192H112V170H143Z" fill="url(#tide)"/>
-  <path d="M58 64H184L172 86H129V178L106 193V86H70Z" fill="#eff8f2" stroke="#102b3b" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill"/>
+  <!-- Separate custom-drawn letters: the L has a straight left edge and a right-only foot. -->
+  <path d="M51 69H138L132 88H110V181H88V88H57Z" fill="#eff8f2"/>
+  <path d="M151 80 173 69V159H207L195 181H151Z" fill="url(#tide)"/>
   <!-- A quiet tide line echoes the ocean-of-knowledge signature. -->
   <path d="M61 212c22-10 44-10 67 0s45 10 67 0" fill="none" stroke="#7fc5c8" stroke-width="3" stroke-linecap="round" opacity=".7"/>
 </svg>
