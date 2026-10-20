@@ -92,11 +92,13 @@ content:
         description: "Optional. A landscape image around 1200 × 630 works well."
       - name: body
         label: Article
-        type: code
+        type: rich-text
         required: true
         options:
           format: markdown
-        description: "Write Markdown here. This source editor preserves fenced code, math, Mermaid, and Chirpy attributes. Upload inline images in Images, then insert their /assets/img/posts/... path."
+          switcher: true
+          media: images
+        description: "Write and format with the toolbar. Use Source for advanced Markdown, formulas, or Mermaid diagrams."
 
   - name: about
     label: About
@@ -110,9 +112,11 @@ content:
         default: About
       - name: body
         label: About me
-        type: code
+        type: rich-text
         options:
           format: markdown
+          switcher: true
+          media: images
 
   - name: site
     label: Site identity

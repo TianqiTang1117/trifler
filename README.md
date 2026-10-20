@@ -6,13 +6,15 @@ Personal notes, reflections, and technical explorations, built with
 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy).
 
 - Website: https://tianqitang1117.github.io/trifler/
-- Writing dashboard: https://app.pagescms.org/
+- Writing dashboard: https://app.pagescms.org/tianqitang1117/trifler/main/collection/posts
 - Repository: https://github.com/TianqiTang1117/trifler
 
 ## Write online
 
 Sign in to Pages CMS with GitHub and open `TianqiTang1117/trifler` on `main`.
 The repository's `.pages.yml` defines posts, images, the About page, and site settings.
+Write with the visual editor's formatting toolbar and image picker, or switch to
+**Source** for advanced Markdown.
 See [the writing guide](docs/cms-setup.md) for the publishing workflow.
 
 Saving a published article triggers GitHub Actions. The website updates after
