@@ -23,7 +23,9 @@ content:
     exclude: [.gitkeep]
     filename:
       template: "{fields.date}-{fields.slug}.md"
-      field: create
+      field: false
+    operations:
+      rename: false
     view:
       fields: [title, date, published, categories]
       primary: title

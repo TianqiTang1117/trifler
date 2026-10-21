@@ -23,7 +23,7 @@ Installation is a one-time account authorization. The hosted connection has been
 
 Saving sends a Git commit to the selected branch. The website updates after the configured GitHub Actions build and deployment finish. Drafts are excluded from the website, but this is a public repository: their Markdown and uploaded images remain publicly accessible on GitHub.
 
-New files use the selected date and slug. Keep the generated `YYYY-MM-DD-slug.md` filename. Changing the date later does not automatically rename an existing file. Keep a published slug stable, since changing it changes the article URL.
+New filenames are generated automatically from the selected date and slug as `YYYY-MM-DD-slug.md`. The filename input and Rename action are hidden so posts always retain the date prefix Jekyll requires. Changing the date later does not automatically rename an existing file. Keep a published slug stable, since changing it changes the article URL.
 
 The CMS date picker saves a calendar date (`yyyy-MM-dd`). Jekyll interprets it at midnight using the site's `timezone: Asia/Shanghai`. The picker's initial value follows the browser's local calendar, so check the date if writing while abroad. For timestamps down to the second, edit the Markdown front matter directly on GitHub with an explicit value such as `2026-10-20 14:30:00 +0800`; this simplified CMS date picker is intended for date-only entries. Future-dated posts require a deployment on or after their publication date.
 
